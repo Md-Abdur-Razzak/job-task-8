@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MyAuth } from "../Router/AuthProvider";
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   const { user,logOutUser } = useContext(MyAuth);
   const handelclick = ()=>{
-    logOutUser( )
+    logOutUser()
   }
   return (
     <div className="navbar bg-base-100 dark:text-white sticky inset-0 z-10  rounded-none border  bg-opacity-30  text-black shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-2 lg:py-2">
@@ -97,12 +98,12 @@ const Navbar = () => {
         <div className="md:flex flex-col justify-center items-center">
           <img
             src={
-              "https://i.ibb.co/Fs0ySSb/png-transparent-wi-fi-computer-network-scalable-graphics-icon-wifi-icon-angle-electronics-text-remov.png"
+              logo
             }
             className="w-[100px] h-[70px] max-[426px]:w-[70px]"
           />
           <h1 className="text-2xl font-extrabold max-[426px]:text-sm">
-            TechElectroHub
+            AKTesk
           </h1>
         </div>
       </div>
@@ -168,6 +169,18 @@ const Navbar = () => {
           >
             Registration
           </NavLink>
+          <NavLink
+            to={"/Dashbord"}
+            className={({ isActive, isPending }) =>
+              isActive
+                ? " text-white bg-green-700 btn"
+                : isPending
+                ? "pending"
+                : ""
+            }
+          >
+            Dashbord
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end md:px-12">
@@ -189,7 +202,7 @@ const Navbar = () => {
           </div>
         </label>
         {
-          user? <button onClick={handelclick}>LogOut</button>: <Link to={"/login"}>
+          user? <button onClick={handelclick} className="btn bg-success">LogOut</button>: <Link to={"/login"}>
           <button className="btn bg-green-700 text-white">login</button>
         </Link>
         }

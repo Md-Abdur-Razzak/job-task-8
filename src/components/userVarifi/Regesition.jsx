@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 
 const Regesition = () => {
-  const {userserRegistraton}=useContext(MyAuth)
+  const {userserRegistraton,logOutUser}=useContext(MyAuth)
   const navigate =useNavigate()
   const handelRegistration = (e) =>{
     e.preventDefault()
@@ -27,7 +27,7 @@ const Regesition = () => {
         displayName:name,
         photoURL:img
       })
-      
+      logOutUser()
       navigate('/login')
        return toast.success("congratulations!  Registration successful ")
       
