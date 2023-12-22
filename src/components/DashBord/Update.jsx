@@ -16,7 +16,7 @@ const Update = () => {
         const prority =from.Priority.value
         const allData = {title,deadline,description,prority}
         
-        axios.patch(`http://localhost:3000/task/${_id}`,allData)
+        axios.patch(`https://job-task-client-phi.vercel.app/task/${_id}`,allData)
         .then(res=>{
           
             if(res.data){

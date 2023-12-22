@@ -15,7 +15,7 @@ const CreatPost = () => {
         const prority =from.Priority.value
         const allData = {title,deadline,description,prority,email}
         console.log(allData);
-        axios.post("http://localhost:3000/task",allData)
+        axios.post("https://job-task-client-phi.vercel.app/task",allData)
         .then(res=>{
             if(res.data){
                 toast.success("Creat a Task Sucessfully")

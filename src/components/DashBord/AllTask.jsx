@@ -9,7 +9,7 @@ const AllTask = () => {
     const [data,setData]=useState([])
     const {user}=useContext(MyAuth)
     useEffect(()=>{
-        axios.get(`http://localhost:3000/task?email=${user?.email}`)
+        axios.get(`https://job-task-client-phi.vercel.app/task?email=${user?.email}`)
         .then(res=>{
               setData(res.data);
            
@@ -27,7 +27,7 @@ const AllTask = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:3000/task/${id}`)
+                axios.delete(`https://job-task-client-phi.vercel.app/task/${id}`)
                 .then(res=>{
                     const newdata = data?.filter(i=>i._id !==id)
                     setData(newdata)

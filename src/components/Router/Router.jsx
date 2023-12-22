@@ -9,11 +9,13 @@ import AllTask from "../DashBord/AllTask";
 import Contack from "../Home/Contack";
 import Update from "../DashBord/Update";
 import Services from "../Home/services";
+import ErrorPage from "../DashBord/ErrorPage";
 
 export const Router = createBrowserRouter([
     {
         path:'/',
         element:<MainContainer></MainContainer>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
@@ -53,7 +55,7 @@ export const Router = createBrowserRouter([
             {
                 path:"/Dashbord/update/:id",
                 element:<Update></Update>,
-                loader:({params})=>fetch(`http://localhost:3000/task/${params.id}`)
+                loader:({params})=>fetch(`https://job-task-client-phi.vercel.app/task/${params.id}`)
             }
             
         ]
