@@ -28,7 +28,7 @@ const DashBord = () => {
           Create Task
         </NavLink>
         <NavLink
-          to={"/services"}
+          to={"/Dashbord/allTask"}
           className={({ isActive, isPending }) =>
             isActive
               ? " text-white bg-green-700 btn"
@@ -38,6 +38,18 @@ const DashBord = () => {
           }
         >
           Manage Task
+        </NavLink>
+        <NavLink
+          to={"/"}
+          className={({ isActive, isPending }) =>
+            isActive
+              ? " text-white bg-green-700 btn"
+              : isPending
+              ? "pending"
+              : ""
+          }
+        >
+         Home
         </NavLink>
       </div>
       <div className="w-full">

@@ -5,6 +5,7 @@ import Login from "../userVarifi/Login";
 import Regesition from "../userVarifi/Regesition";
 import DashBord from "../DashBord/DashBord";
 import CreatPost from "../DashBord/CreatPost";
+import AllTask from "../DashBord/AllTask";
 
 export const Router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const Router = createBrowserRouter([
             {
                 path:"/Dashbord/creatTast",
                 element:<CreatPost></CreatPost>
+            },
+            {
+                path:"/Dashbord/allTask",
+                element:<AllTask></AllTask>
             }
             
         ]
