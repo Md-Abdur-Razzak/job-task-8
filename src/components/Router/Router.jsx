@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Login from "../userVarifi/Login";
 import Regesition from "../userVarifi/Regesition";
 import DashBord from "../DashBord/DashBord";
+import CreatPost from "../DashBord/CreatPost";
 
 export const Router = createBrowserRouter([
     {
@@ -24,14 +25,16 @@ export const Router = createBrowserRouter([
             }
         ]
     },
+
     {
         path:'/Dashbord',
         element:<DashBord></DashBord>,
         children:[
             {
-                path:"/Dashbord",
-                element:<h1>raju islam</h1>
+                path:"/Dashbord/creatTast",
+                element:<CreatPost></CreatPost>
             }
+            
         ]
     }
    

@@ -16,7 +16,7 @@ const DashBord = () => {
           <h1>{user?.displayName}</h1>
         </div>
         <NavLink
-          to={"/"}
+          to={"/Dashbord/creatTast"}
           className={({ isActive, isPending }) =>
             isActive
               ? " text-white bg-green-700 btn"
@@ -40,7 +40,7 @@ const DashBord = () => {
           Manage Task
         </NavLink>
       </div>
-      <div>
+      <div className="w-full">
         <Outlet></Outlet>
       </div>
     </div>

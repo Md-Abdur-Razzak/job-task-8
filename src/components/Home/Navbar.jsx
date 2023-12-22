@@ -170,7 +170,7 @@ const Navbar = () => {
             Registration
           </NavLink>
           <NavLink
-            to={"/Dashbord"}
+            to={"/Dashbord/creatTast"}
             className={({ isActive, isPending }) =>
               isActive
                 ? " text-white bg-green-700 btn"
