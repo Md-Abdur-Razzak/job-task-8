@@ -6,6 +6,7 @@ import Regesition from "../userVarifi/Regesition";
 import DashBord from "../DashBord/DashBord";
 import CreatPost from "../DashBord/CreatPost";
 import AllTask from "../DashBord/AllTask";
+import Contack from "../Home/Contack";
 
 export const Router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ export const Router = createBrowserRouter([
             {
                 path:'/registration',
                 element:<Regesition></Regesition>
+            },
+            {
+                path:'/contack',
+                element:<Contack></Contack>
             }
         ]
     },
