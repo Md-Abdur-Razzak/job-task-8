@@ -56,7 +56,7 @@ const AllTask = () => {
                            <h1>{item.prority}</h1>                         
                            <h1>{item.description}</h1> 
                            <div>
-                                <Link to={`/update/${item._id}`} className="btn  bg-green-500">Edit</Link>
+                                <Link to={`/Dashbord/update/${item._id}`} className="btn  bg-green-500">Edit</Link>
                                 <Link onClick={()=>hadeldelete(item._id)} className="btn bg-green-500">delete</Link>
                             </div>                        
                         </div>

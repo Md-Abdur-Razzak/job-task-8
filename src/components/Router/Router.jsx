@@ -7,6 +7,8 @@ import DashBord from "../DashBord/DashBord";
 import CreatPost from "../DashBord/CreatPost";
 import AllTask from "../DashBord/AllTask";
 import Contack from "../Home/Contack";
+import Update from "../DashBord/Update";
+import Services from "../Home/services";
 
 export const Router = createBrowserRouter([
     {
@@ -28,6 +30,10 @@ export const Router = createBrowserRouter([
             {
                 path:'/contack',
                 element:<Contack></Contack>
+            },
+            {
+                path:'/services',
+                element:<Services></Services>
             }
         ]
     },
@@ -43,6 +49,11 @@ export const Router = createBrowserRouter([
             {
                 path:"/Dashbord/allTask",
                 element:<AllTask></AllTask>
+            },
+            {
+                path:"/Dashbord/update/:id",
+                element:<Update></Update>,
+                loader:({params})=>fetch(`http://localhost:3000/task/${params.id}`)
             }
             
         ]

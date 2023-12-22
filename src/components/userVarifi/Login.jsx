@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { MyAuth } from "../Router/AuthProvider";
+import Google from "../Home/Google";
 
 const Login = () => {
   const { singWithEmailAndPassword } = useContext(MyAuth);
+  const navigate = useNavigate()
   const handelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -13,6 +15,7 @@ const Login = () => {
     singWithEmailAndPassword(email, password)
       .then((res) => {
         //navigator(singLocation?.state? singLocation.state :"/")
+        navigate('/Dashbord/creatTast')
         return toast.success("Log In success");
       })
       .catch((error) => {
@@ -64,7 +67,7 @@ const Login = () => {
                   <button className="btn btn-primary">Login</button>
                 </div>
                 <div>
-                  <div></div>
+                  <div><Google></Google></div>
                   <p className="text-[15px]">
                     Dont’t Have An Account ?
                     <Link

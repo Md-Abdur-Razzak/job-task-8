@@ -44,18 +44,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <NavLink
-              to={"/about"}
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? " text-white bg-green-700 btn"
-                  : isPending
-                  ? "pending"
-                  : ""
-              }
-            >
-              About us
-            </NavLink>
+            
             <NavLink
               to={"/services"}
               className={({ isActive, isPending }) =>
@@ -121,18 +110,7 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <NavLink
-            to={"/about"}
-            className={({ isActive, isPending }) =>
-              isActive
-                ? " text-white bg-green-700 btn"
-                : isPending
-                ? "pending"
-                : ""
-            }
-          >
-            About us
-          </NavLink>
+        
           <NavLink
             to={"/services"}
             className={({ isActive, isPending }) =>
@@ -169,18 +147,20 @@ const Navbar = () => {
           >
             Registration
           </NavLink>
-          <NavLink
-            to={"/Dashbord/creatTast"}
-            className={({ isActive, isPending }) =>
-              isActive
-                ? " text-white bg-green-700 btn"
-                : isPending
-                ? "pending"
-                : ""
+            {
+              user &&          <NavLink
+              to={"/Dashbord/creatTast"}
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? " text-white bg-green-700 btn"
+                  : isPending
+                  ? "pending"
+                  : ""
+              }
+            >
+              Dashbord
+            </NavLink> 
             }
-          >
-            Dashbord
-          </NavLink>
         </ul>
       </div>
       <div className="navbar-end md:px-12">
